@@ -1,0 +1,124 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  min-height: 70px;
+}
+
+.navbar > * {
+  flex-shrink: 0;
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  color: #222;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+  text-transform: lowercase;
+}
+
+.navbar-menu li:hover {
+  color: #222;
+}
+
+.navbar-menu li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #222;
+  transition: width 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.navbar-menu li:hover::after {
+  width: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-icon {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.navbar-basket-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-button {
+  padding: 8px 20px;
+  background: #fff;
+  color: #222;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-button:hover {
+  background: #222;
+  color: #fff;
+}
+
+body {
+  padding-top: 70px;
+}

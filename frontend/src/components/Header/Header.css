@@ -1,0 +1,46 @@
+/* Header styles */
+.header {
+  position: relative;
+  height: 34vw;
+  margin: 30px auto;;
+  background: url('/header_img.png') no-repeat;
+  background-size: contain;
+}
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1.5rw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+.header-contents h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw,22px);
+}
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+}
+.header-contents button{
+    border: none;
+    background: white;
+    color: #747474;
+    padding: 1vw 2.3vw;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: max(1vw,12px);
+}
+
+.explore-menu-header h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
