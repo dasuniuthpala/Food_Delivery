@@ -1,0 +1,125 @@
+.place-order {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  background: #fafbfc;
+  padding: 32px 0 64px 0;
+  box-sizing: border-box;
+}
+
+.place-order-left {
+  flex: 2;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 32px 32px 24px 32px;
+  min-width: 340px;
+  color: #222;
+}
+
+.delivery-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #222;
+}
+
+.delivery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+}
+
+.delivery-grid input[type="text"] {
+  padding: 14px 16px;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #222;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.delivery-grid input[type="text"]:focus {
+  border: 1.5px solid #ff4d4f;
+}
+
+.cart-summary {
+  flex: 1;
+  background: #fcfcfc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 32px 24px 32px;
+  min-width: 300px;
+  margin-left: 0;
+  height: fit-content;
+  border: 1px solid #ececec;
+  color: #222;
+}
+
+.cart-summary h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+.cart-summary-total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px 0;
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #d9363e;
+}
+
+@media (max-width: 900px) {
+  .place-order {
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px 0 32px 0;
+  }
+  .place-order-left, .cart-summary {
+    min-width: unset;
+    width: 98vw;
+    padding: 18px 8px;
+  }
+  .delivery-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .delivery-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

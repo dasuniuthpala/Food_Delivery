@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link, useLocation } from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext' 
+
+
 
 function Navbar({setShowLogin}) {
   const [menu, setMenu] = useState("home");
   const location = useLocation();
+  const {getTotalCartAmount} = useContext(StoreContext);
 
   // Smooth scroll to section if on home page
   const handleScroll = (id, menuName) => (e) => {
@@ -23,7 +27,7 @@ function Navbar({setShowLogin}) {
   return (
     <div className='navbar'>
       <div className='navbar-content'>
-        <img src={assets.logo} alt="logo" className='logo' />
+        <Link to="/"><img src={assets.logo} alt="logo" className='logo' /></Link>
         <ul className='navbar-menu'>
           <li>
             <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
@@ -61,8 +65,8 @@ function Navbar({setShowLogin}) {
         <div className='navbar-right'>
           <img src={assets.search_icon} alt="search" className='navbar-icon' />
           <div className="navbar-basket-wrapper">
-            <img src={assets.basket_icon} alt="basket" className='navbar-icon' />
-            <div className="dot"></div>
+            <Link to="/cart"><img src={assets.basket_icon} alt="basket" className='navbar-icon' /></Link>
+            <div className={getTotalCartAmount()===0? "" : "dot"}></div>
           </div>
           <button onClick={() => setShowLogin(true)}>sign in</button>
         </div>
