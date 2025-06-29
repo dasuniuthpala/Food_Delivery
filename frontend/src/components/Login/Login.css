@@ -1,0 +1,140 @@
+.login-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.login-modal {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  padding: 36px 32px 28px 32px;
+  min-width: 340px;
+  max-width: 95vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.login-modal-close {
+  position: absolute;
+  top: 18px; right: 22px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.login-modal-close:hover {
+  color: #e4572e;
+}
+.login-modal h2 {
+  margin: 0 0 18px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  color: #444;
+}
+.login-modal input[type="email"],
+.login-modal input[type="password"],
+.login-modal input[type="text"] {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: border 0.2s;
+}
+.login-modal input[type="email"]::placeholder,
+.login-modal input[type="password"]::placeholder,
+.login-modal input[type="text"]::placeholder {
+  color: #b0b0b0;
+  font-size: 1rem;
+  opacity: 1;
+}
+.login-modal input[type="email"]:focus,
+.login-modal input[type="password"]:focus,
+.login-modal input[type="text"]:focus {
+  border: 1.5px solid #e4572e;
+  outline: none;
+}
+.login-modal-submit {
+  width: 100%;
+  padding: 12px 0;
+  background: #e4572e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.login-modal-submit:hover {
+  background: #c13c13;
+}
+.login-modal-checkbox {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.97rem;
+  margin-bottom: 12px;
+  color: #666;
+  gap: 8px;
+}
+.login-modal-checkbox input[type="checkbox"] {
+  accent-color: #e4572e;
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid #ccc;
+  background: #fff;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.login-modal-checkbox input[type="checkbox"]:checked {
+  background: #e4572e;
+  border-color: #e4572e;
+}
+.login-modal-checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+}
+.login-modal-footer {
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 10px;
+  color: #888;
+}
+.login-modal-footer a {
+  color: #e4572e;
+  text-decoration: underline;
+  margin-left: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .login-modal {
+    min-width: 90vw;
+    padding: 18px 6vw 18px 6vw;
+  }
+}

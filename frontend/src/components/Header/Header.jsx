@@ -1,11 +1,19 @@
 import React from 'react';
 import "./Header.css";
 import { assets } from '../../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
-    <div className='header'>
-      <img src={assets.header_img} alt="food" className="header-bg-img" />
+    <div className='header-hero'>
+      <img
+        src={assets.header_img}
+        alt="food"
+        className="header-bg-img"
+        style={{ cursor: 'pointer' }}
+        onClick={() => navigate('/cart')}
+      />
       <div className='header-contents'>
         <h2>Order your<br/>favourite food here</h2>
         <p className="header-desc">

@@ -3,6 +3,7 @@ import './Home.css'
 import Header from "../../components/Header/Header";
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
 import FoodDisplay from "../../components/foodDisplay/foodDisplay";
+import AppDownloard from "../../components/AppDownloard/AppDownloard";
 
 // Map UI button/category names to data keys
 const categoryMap = {
@@ -26,18 +27,18 @@ function Home() {
   };
 
   return (
-    <div>
+    <div id="home">
       <Header />
-      <button onClick={() => handleCategory("All")}>All</button>
-      <button onClick={() => handleCategory("Salad")}>Salad</button>
-      <button onClick={() => handleCategory("Rolls")}>Rolls</button>
-      <button onClick={() => handleCategory("Deserts")}>Deserts</button>
-      <button onClick={() => handleCategory("Sandwich")}>Sandwich</button>
-      <button onClick={() => handleCategory("Cake")}>Cake</button>
-      <ExploreMenu selectedCategory={category} onCategorySelect={handleCategory} />
+      <section id="explore-menu-section">
+        <ExploreMenu selectedCategory={category} onCategorySelect={handleCategory} />
+      </section>
       <FoodDisplay category={category} />
+      <section id="app-download">
+        <AppDownloard />
+      </section>
+      {/* Make sure your Footer component has id="footer" */}
     </div>
   )
 }
 
-export default Home
+export default Home;
