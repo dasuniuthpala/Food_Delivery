@@ -2,11 +2,11 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
-import { addFood } from "../controllers/foodControllers.js";
+import { addFood ,listfood,removefood} from "../controllers/foodControllers.js";
 
 const foodRouter = express.Router();
 
-const uploadDir = path.join(process.cwd(), "backend/uploads");
+const uploadDir = path.join(process.cwd(), "/uploads");
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
@@ -21,5 +21,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 foodRouter.post("/add", upload.single("image"), addFood);
+foodRouter.get("/list",listfood)
+foodRouter.post("/remove",removefood);
+
 
 export default foodRouter;

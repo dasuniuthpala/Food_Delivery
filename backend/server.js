@@ -13,13 +13,14 @@ const port = 4000
 //middleware
 app.use(express.json())
 app.use(cors())
-app.use('/uploads', express.static(path.join(process.cwd(), 'backend/uploads')))
-
+app.use('/uploads', express.static(path.join(process.cwd(), '/uploads')))
+app.use('/images', express.static('uploads'))
 //DB connection 
 connectDB();
 
 //API endpoints
 app.use("/api/food", foodRouter)
+app.use("/images",express.static('uploads'))
 
 app.get("/",(req,res)=> {
     res.send("API Working")
