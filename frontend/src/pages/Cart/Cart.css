@@ -63,6 +63,15 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+.cart-item-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
 .remove-btn {
   cursor: pointer;
   text-align: center;

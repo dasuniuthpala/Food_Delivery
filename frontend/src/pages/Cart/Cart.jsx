@@ -30,8 +30,12 @@ function Cart() {
             return (
               <React.Fragment key={item.id}>
                 <div className="cart-items-item">
-                <img src={`http://localhost:4000/uploads/${item.image}`} alt={item.name} />
-                  <p>{item.name}</p>
+                  <img 
+                    src={item.image.startsWith('data:') ? item.image : `http://localhost:4000/uploads/${item.image}`}
+                    alt={item.name}
+                    className="cart-item-img"
+                  />
+                  <p>{item.name}</p>                                                          {/* Title column: name */}
                   <p>${item.price}</p>
                   <p>{cartItems[item.id]}</p>
                   <p>${(item.price * cartItems[item.id]).toFixed(2)}</p>

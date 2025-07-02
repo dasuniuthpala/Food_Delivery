@@ -1,11 +1,12 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../assets/assets";
+import { food_list as initialFoodList } from "../assets/assets";
 
 // Create the context
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-    // Correct useState usage
+    // Make food_list stateful
+    const [food_list, setFoodList] = useState(initialFoodList);
     const [cartItems, setCartItems] = useState({});
 
     const addToCart = (itemId) => {
@@ -35,6 +36,19 @@ const StoreContextProvider = (props) => {
         return total;
     };
 
+    // Add deleteFoodItem function
+    const deleteFoodItem = (id) => {
+        setFoodList((prev) => prev.filter(item => item.id !== id));
+    };
+
+    // Add addFoodItem function
+    const addFoodItem = (item) => {
+        setFoodList((prev) => [
+            ...prev,
+            { ...item, id: prev.length ? Math.max(...prev.map(i => i.id)) + 1 : 1 }
+        ]);
+    };
+
     useEffect(() => {
         console.log(cartItems);
     }, [cartItems]);
@@ -45,7 +59,9 @@ const StoreContextProvider = (props) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        deleteFoodItem, // Export delete function
+        addFoodItem // Export add function
     };
 
     return (

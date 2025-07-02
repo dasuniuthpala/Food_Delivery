@@ -9,6 +9,7 @@ import Footer  from './components/Footer/Footer'
 import Login from './components/Login/Login'
 import AddItem from './components/AddItem/AddItem'
 import Orders from './components/Orders/Orders'
+import ListItem from './components/ListItem/ListItem'
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/order' element={<PlaceOrder />} />
           <Route path='/add-item' element={<AddItem />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path='/list-items' element={<ListItem />} />
         </Routes>
       </div>
       <Footer />

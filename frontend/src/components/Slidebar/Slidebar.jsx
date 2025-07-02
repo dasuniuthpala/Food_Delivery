@@ -8,6 +8,10 @@ const Slidebar = ({ open, onClose }) => {
     onClose();
     navigate('/add-item');
   };
+  const handleListItems = () => {
+    onClose();
+    navigate('/list-items');
+  };
   const handleOrders = () => {
     onClose();
     navigate('/orders');
@@ -17,7 +21,7 @@ const Slidebar = ({ open, onClose }) => {
       <div className={`slidebar-overlay${open ? ' open' : ''}`} onClick={onClose}></div>
       <div className={`slidebar slidebar-right${open ? ' open' : ''}`}>
         <button className="slidebar-btn" onClick={handleAddItem}><span>＋</span> Add Items</button>
-        <button className="slidebar-btn"><span>☑</span> List Items</button>
+        <button className="slidebar-btn" onClick={handleListItems}><span>☑</span> List Items</button>
         <button className="slidebar-btn" onClick={handleOrders}><span>☑</span> Orders</button>
       </div>
     </>
