@@ -1,0 +1,115 @@
+.additem-page {
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 0 0 0;
+}
+.additem-form {
+  background: #fff;
+  margin: 0 auto;
+  padding: 32px 32px 32px 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.additem-label {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.additem-upload-box {
+  margin-bottom: 10px;
+}
+.additem-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 90px;
+  border: 1.5px dashed #bbb;
+  border-radius: 8px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.additem-upload-label:hover {
+  border: 1.5px solid #e74c3c;
+}
+.additem-upload-icon {
+  font-size: 2.2rem;
+  color: #bbb;
+}
+.additem-upload-text {
+  font-size: 1rem;
+  color: #888;
+}
+.additem-upload-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.additem-input, .additem-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafafa;
+  color: #222;
+  margin-bottom: 0;
+  transition: border 0.2s;
+}
+.additem-input:focus, .additem-select:focus {
+  border: 1.5px solid #e74c3c;
+  outline: none;
+}
+.additem-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafafa;
+  color: #222;
+  resize: vertical;
+  transition: border 0.2s;
+}
+.additem-textarea:focus {
+  border: 1.5px solid #e74c3c;
+  outline: none;
+}
+.additem-row {
+  display: flex;
+  gap: 18px;
+}
+.additem-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.additem-submit {
+  width: 120px;
+  padding: 12px 0;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+.additem-submit:hover {
+  background: #e74c3c;
+}

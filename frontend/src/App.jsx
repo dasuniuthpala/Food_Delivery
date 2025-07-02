@@ -7,6 +7,8 @@ import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer  from './components/Footer/Footer'
 import Login from './components/Login/Login'
+import AddItem from './components/AddItem/AddItem'
+import Orders from './components/Orders/Orders'
 
 const App = () => {
 
@@ -21,6 +23,8 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<PlaceOrder />} />
+          <Route path='/add-item' element={<AddItem />} />
+          <Route path='/orders' element={<Orders />} />
         </Routes>
       </div>
       <Footer />

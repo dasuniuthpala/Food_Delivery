@@ -116,6 +116,15 @@ body {
   padding-top: 70px;
 }
 
+.navbar-admin-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
 /* ---------- Responsive Media Queries ---------- */
 
 /* ≤1050px screens */
@@ -183,6 +192,11 @@ body {
   .navbar-button {
     background: #ff0000;
     color: #fff;
+  }
+  .navbar-admin-img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
   }
 }
 

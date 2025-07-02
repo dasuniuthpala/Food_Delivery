@@ -29,6 +29,7 @@ import search_icon from './search_icon.png'
 import selector_icon from './selector_icon.png'
 import twitter_icon from './twitter_icon.png'
 import header_img from './header_img.png'
+import admin from './admin.png'
 // food images
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -128,6 +129,7 @@ export const assets = {
     food_30,
     food_31,
     food_32,
+    admin,
 }
 
 export const food_list = [

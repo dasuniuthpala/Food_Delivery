@@ -1,0 +1,63 @@
+.slidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1999;
+}
+.slidebar-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slidebar.slidebar-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 20px 20px 20px;
+}
+.slidebar.slidebar-right.open {
+  transform: translateX(0);
+}
+
+.slidebar-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  background: #f7f7f7;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+}
+.slidebar-btn span {
+  margin-right: 14px;
+  font-size: 1.3rem;
+}
+.slidebar-btn:hover {
+  background: #ececec;
+  color: #e74c3c;
+  border: 1.5px solid #e74c3c;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.08);
+}

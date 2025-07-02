@@ -7,6 +7,7 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <div className='header-hero'>
+      
       <img
         src={assets.header_img}
         alt="food"
