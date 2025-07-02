@@ -3,6 +3,7 @@ import './AddItem.css';
 
 const AddItem = () => {
   const [image, setImage] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
   const [name, setName] = useState('');
   const [desc, setDesc] = useState('');
   const [category, setCategory] = useState('Salad');
@@ -10,13 +11,35 @@ const AddItem = () => {
 
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
+      setImageFile(e.target.files[0]);
       setImage(URL.createObjectURL(e.target.files[0]));
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add submit logic here
+    const formData = new FormData();
+    formData.append('image', imageFile);
+    formData.append('name', name);
+    formData.append('description', desc);
+    formData.append('price', price);
+    formData.append('category', category);
+
+    try {
+      const response = await fetch('http://localhost:4000/api/food/add', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert('Food added successfully!');
+        // Optionally reset form here
+      } else {
+        alert(data.message || 'Failed to add food');
+      }
+    } catch (error) {
+      alert('Error: ' + error.message);
+    }
   };
 
   return (
